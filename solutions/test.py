@@ -14,6 +14,7 @@ model = AutoModelForCausalLM.from_pretrained(
     device_map="auto"
 )
 
+
 prompt = "Explain transformers like I'm five."
 
 inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
